@@ -1,0 +1,966 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}The Accretio | A Boutique Branding and Creative Atelier{% endblock %}
+{% block meta-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+{% block canonical-link %}https://theaccretio.com/{% endblock %}
+{% block og-url %}https://theaccretio.com/{% endblock %}
+{% block og-title %}The Accretio | A Boutique Branding and Creative Atelier{% endblock %}
+{% block og-sitename %}The Accretio | A Boutique Branding and Creative Atelier{% endblock %}
+{% block og-imgalt %}The Accretio | A Boutique Branding and Creative Atelier{% endblock %}
+{% block og-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+{% block twitter-imgalt %}The Accretio | A Boutique Branding and Creative Atelier{% endblock %}
+{% block twitter-title %}Home{% endblock %}
+{% block twitter-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+
+{% block content %}
+    <div class="popup" id="video-popup">
+        <div class="popup-content">
+            <span class="close-button" id="close-button">&times;</span>
+            <video id="video-player" class="d-desktop no-d-mobile" playsinline
+                poster="{% static 'images/website-video.png' %}"
+                controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback" preload="none">
+                <source src="{% static 'images/website-video.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="play-pause-button" id="play-pause-button">
+                <div class="play-icon"></div>
+            </div>
+            <input type="range" id="timeline" class="timeline" value="0" step="0.01">
+        </div>
+    </div>
+
+    <div class="popup" id="video-popup2">
+        <div class="d-mobile no-d-desktop h-100">
+            <div class="popup-content">
+                <span class="close-button" id="close-button2">&times;</span>
+                <video id="video-player2" playsinline
+                    poster="{% static 'images/website-video-m-thumb.png' %}"
+                    controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback" preload="none">
+                    <source src="{% static 'images/website-video-m.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="play-pause-button" id="play-pause-button2">
+                    <div class="play-icon"></div>
+                </div>
+                <input type="range" id="timeline2" class="timeline" value="0" step="0.01">
+            </div>
+        </div>
+    </div>
+
+    <main class="home-scrolleffect">
+        <section id="home-scroll-section-1" class="panel home-scrolleffection-sec1 bg-transparent">
+            <div class="sticky-height">
+                <div class="sticky-content">
+                    <div class="content-wrapper home-scrolleffection-sec1-bg">
+                        <div class="scroll-screen-top">
+                            <div class="scroll-screen-text-top">A</div>
+                        </div>
+                        <div class="scroll-screen-bottom">
+                            <div class="scroll-screen-text-bottom">A</div>
+                        </div>
+                        <div class="home-scrolleffect-t scrolleffect-title-ani-2">
+                            <h1 class="home-scrolleffect-title scrolleffect-title-ani">Branding.<br>Fearless
+                                Creativity.<br>The Accretio.
+                            </h1>
+                        </div>
+                        <div class="home-scrolleffect-t2 bg-black">
+                            <div class="container-margin-home">
+                                <div class="home-scrolleffect-title2 d-desktop no-d-mobile">We are The Accretio, a boutique Branding and Digital Marketing firm based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.</div>
+                                <div class="home-scrolleffect-title2 no-d-desktop d-mobile">We are The Accretio<br><br>
+                                    A boutique Branding and Digital Marketing firm based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.</div>
+                                <div class="home-scrolleffect-a">
+                                    <a class="home-scrolleffect-link no-d-mobile d-desktop" id="show-popup">Watch our
+                                        <span>Showcase</span>
+                                        <i class="ms-3 fa-regular fa-circle-play"></i></a>
+                                    <a class="home-scrolleffect-link no-d-desktop d-mobile" id="show-popup2">Watch
+                                        our
+                                        <span>Showcase</span>
+                                        <i class="ms-3 fa-regular fa-circle-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 2 -->
+        <section class="section2 ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="section2-title d-flex justify-content-start text-light my-5">
+                            <div class="section2-text animate-2-top">
+                                <h2 class="text-start text-animate">Our expertise</h2>
+                                {% comment %} <p class="expertise-t-s">discuss what we are pro in</p> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 animate-2-top">
+                        <div class="title-line d-desktop no-d-mobile">
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="our-expertise d-flex">
+                <div class="approaches-content mt-5 me-5">
+                    <div class="row">
+                        <div class="expertise-content-1 col-lg-6">
+                            <div class="animate-2-top expertise-tab-2">
+                                <div class="expertise-tab text-decoration-none h3 fw-normal">Artificial Intelligence</div>
+                            </div>
+                            <div class="mt-5 animate-2-top expertise-tab-2">
+                                <div class="expertise-tab text-decoration-none h3 fw-normal">Brand Identity</div>
+                            </div>
+                            <div class="mt-5 animate-2-top expertise-tab-2">
+                                <div class="expertise-tab text-decoration-none h3 fw-normal">Web-development and Customer Experience</div>
+                            </div>
+                            <div class="mt-5 animate-2-top expertise-tab-2">
+                                <div class="expertise-tab text-decoration-none h3 fw-normal">Social Media Marketing</div>
+                            </div>
+                        </div>
+                        <div class="expertise-content-2 col-lg-6">
+                            <div class="animate-2-top expertise-tab-2">
+                                <div class="expertise-tab text-decoration-none h3 fw-normal">Content Marketing</div>
+                            </div>
+                            <div class="mt-5 animate-2-top expertise-tab-2">
+                                <div class="expertise-tab text-decoration-none h3 fw-normal">Search Engine Optimization</div>
+                            </div>
+                            <div class="mt-5 animate-2-top expertise-tab-2">
+                                <div class="expertise-tab text-decoration-none h3 fw-normal">Photography and Cinematography</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-circle no-d-mobile">
+                    <div class="animation">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="animation-2 position-absolute">
+                        <div class="circle-2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container animate-2-top">
+                <div id="accretio-btn" class="accretio-btn text-end my-4">
+                    <a href="expertise" class="accretio-button">Discover</a>
+                </div>
+            </div>
+        </section>
+        <!-- Section 2 ends -->
+
+        <!-- AI Video Section -->
+        <div class="ai-video d-desktop no-d-mobile">
+            <video class="w-100 d-block" autoplay muted loop playsinline preload="none"
+                poster="{% static 'images/ai-video-thumb.png' %}"
+                controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback">
+                <source src="{% static 'images/ai-video.mp4' %}" type="video/mp4">
+            </video>
+        </div>
+        <!-- AI Video Section ends -->
+
+        <!-- AI Video Mobile Section -->
+        <div class="ai-video no-d-desktop no-d-mobile">
+            <video class="w-100 d-block" autoplay muted loop playsinline preload="none"
+                poster="{% static 'images/ai-video-m-thumb.png' %}"
+                controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback">
+                <source src="{% static 'images/ai-video-m.mp4' %}" type="video/mp4">
+            </video>
+            <!-- <div class="show-img1 w-100 p-16">
+            <img loading="lazy" class="img-fluid" src="{% static 'images/ai-video.png' %}" alt="AI Image">
+        </div> -->
+        </div>
+        <!-- AI Video Mobile Section ends -->
+
+        <!-- Mobile Video -->
+        <!-- <div class="ai-video2-2-2 no-d-desktop d-mobile">
+        <video class="w-100 d-block" autoplay muted>
+            <source src="{% static 'images/ai-video-m.mp4' %}" type="video/mp4">
+        </video>
+        <div id="ai-play-button-home-2" class="ai-play-button"></div>
+    </div> -->
+
+        <!-- Section 3 -->
+        <section class="section3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="section2-title d-flex text-light my-5">
+                            <div class="section3-text-2">
+                                <h2 class="ms-3 ms-lg-5 text-start animate-2-top text-animate">Approaches</h2>
+                                <p class="ms-3 ms-lg-5 expertise-t-s text-start animate-2-top">We create
+                                    experiences for
+                                    your customers that inspire action, build loyalty, and unlock growth across
+                                    channels,
+                                    media and beyond.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="title-line">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="approaches">
+                <div class="row g-0">
+                    <div class="col-lg-9">
+                        <div class="approaches-content approaches-content-w mt-3">
+                            <div class="row">
+                                <div id="approaches-box" class="col-xl-3 col-lg-4 col-sm-6 me-5">
+                                    <div class="expertise-box animate-2-top">
+                                        <h4 class="expertise-title mb-5">Fearless Creativity</h4>
+                                        <p class="expertise-c">We bring true innovation to market, breaking the mold
+                                            with
+                                            innovative
+                                            uses of technology and human-centred experience design.</p>
+                                        <span class="expertise-c-b fs-4">FC</span>
+                                    </div>
+                                </div>
+                                <div id="approaches-box" class="col-xl-3 col-lg-4 col-sm-6 me-5">
+                                    <div class="expertise-box animate-2-top">
+                                        <h4 class="expertise-title mb-5">Real Human Insight</h4>
+                                        <p class="expertise-c">We go beyond one-time investigations and overarching
+                                            generalisations
+                                            to living, real-time human truths, backed by data.</p>
+                                        <span class="expertise-c-b fs-4">RHI</span>
+                                    </div>
+                                </div>
+                                <div id="approaches-box" class="col-xl-3 col-lg-4 col-sm-6">
+                                    <div class="expertise-box animate-2-top">
+                                        <h4 class="expertise-title mb-5">Business Rigor</h4>
+                                        <p class="expertise-c">We pair our creative instincts with strategic assessments
+                                            to
+                                            validate
+                                            the innovations that will drive outcomes for your brand.</p>
+                                        <span class="expertise-c-b fs-4">BR</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="circle2 animate-2-top d-desktop no-d-mobile"><img loading="lazy"
+                                src="{% static 'images/approaches-circle.svg' %}" alt="animation"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 3 ends -->
+
+        <!-- Section 4 -->
+        <section class="section4">
+            <div class="container-margin show-border">
+                <div class="px-3 py-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-6">
+                            <h2 class="text-showcase text-animate">Showcase</h2>
+                        </div>
+                        <div class="col-lg-8 col-6">
+                            <div class="title-line2">
+                                <div class="line4-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Animation -->
+            <div class="border-bottom-animation  z-index-2 d-flex">
+                <div class="w-50 position-relative border-bottom-animation-b">
+                    <div class="border-bottom-animation-l-2"></div>
+                </div>
+                <div class="w-50 position-relative border-bottom-animation-b">
+                    <div class="border-bottom-animation-r-2"></div>
+                </div>
+            </div>
+            <!-- Animation -->
+            <div class="animate-2-top">
+                <div class="container-margin show-border-f p-0">
+                    <div class="row g-0">
+                        <div class="col-lg-12 col-12">
+                            <div
+                                class="ai-video2 content-video d-desktop no-d-mobile position-relative px-16 pt-16 pb-0">
+                                <video class="w-100 d-block" muted loop playsinline
+                                    preload="none" poster="{% static 'images/evation-mockup-thumb.png' %}"
+                                    controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback">
+                                    <source src="{% static 'images/evation-mockup.mp4' %}" type="video/mp4">
+                                </video>
+                                <!-- <div class="ai-play-button"></div> -->
+                                <!-- Animation -->
+                                {% comment %} <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-l-2"></div>
+                                    </div>
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-r-2"></div>
+                                    </div>
+                                </div> {% endcomment %}
+                                <!-- Animation -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animation -->
+                <div class="border-bottom-animation  z-index-2 no-d-mobile d-desktop ">
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-l-2"></div>
+                    </div>
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-r-2"></div>
+                    </div>
+                </div>
+                <!-- Animation -->
+            </div>
+            <div class="animate-2-top d-mobile d-desktop">
+                <div class="container-margin show-border-f p-0">
+                    <div class="show-img1 no-d-desktop d-mobile w-100 px-16 pt-16 pb-0">
+                        <picture>
+                            <source srcset="{% static 'images/antaracares.webp' %}" type="image/webp">
+                            <img class="img-fluid" src="{% static 'images/antaracares.jpg' %}"
+                                alt="Antara - Online Naturopathy Consultation">
+                        </picture>
+                        <!-- Animation -->
+                        <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                            <div class="w-50 position-relative border-bottom-animation-b">
+                                <div class="border-bottom-animation-l-2"></div>
+                            </div>
+                            <div class="w-50 position-relative border-bottom-animation-b">
+                                <div class="border-bottom-animation-r-2"></div>
+                            </div>
+                        </div>
+                        <!-- Animation -->
+                    </div>
+                </div>
+            </div>
+            <div class="animate-2-top d-mobile d-desktop">
+                <div class="container-margin show-border-f p-0">
+                    <div class="show-img1 no-d-desktop d-mobile w-100 px-16 pt-16 pb-0">
+                        <picture>
+                            <source srcset="{% static 'images/edubest.webp' %}" type="image/webp">
+                            <img class="img-fluid" src="{% static 'images/edubest.jpg' %}"
+                                alt="EduBEST Online Learning Website">
+                        </picture>
+                        <!-- Animation -->
+                        <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                            <div class="w-50 position-relative border-bottom-animation-b">
+                                <div class="border-bottom-animation-l-2"></div>
+                            </div>
+                            <div class="w-50 position-relative border-bottom-animation-b">
+                                <div class="border-bottom-animation-r-2"></div>
+                            </div>
+                        </div>
+                        <!-- Animation -->
+                    </div>
+                </div>
+            </div>
+            <div class="animate-2-top">
+                <div class="container-margin show-border-f p-0">
+                    <div class="row g-0">
+                        {% comment %} <div class="col-lg-5 col-12 border-r">
+                            <div>
+                                <div class="show-img1 w-100 px-16 pt-16 pb-0">
+                                    <picture>
+                                        <source srcset="{% static 'images/1.webp' %}" type="image/webp">
+                                        <img loading="lazy" class="img-fluid" src="{% static 'images/1.png' %}" alt="Iconic City">
+                                    </picture>
+                                    <!-- Animation -->
+                                    <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                        <div class="w-50 position-relative border-bottom-animation-b">
+                                            <div class="border-bottom-animation-l-2"></div>
+                                        </div>
+                                        <div class="w-50 position-relative border-bottom-animation-b">
+                                            <div class="border-bottom-animation-r-2"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Animation -->
+                                </div>
+                            </div>
+                        </div> {% endcomment %}
+                        <div class="col-lg-6 col-12 border-r">
+                            <div class="show-img1 no-d-mobile d-d-desktop w-100 px-16 pt-16 pb-0">
+                                <picture>
+                                    <source srcset="{% static 'images/3-2.webp' %}"
+                                        type="image/webp">
+                                    <img class="img-fluid" src="{% static 'images/3-2.jpg' %}"
+                                        alt="Kubera Parivar">
+                                </picture>
+                                <!-- Animation -->
+                                <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-l-2"></div>
+                                    </div>
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-r-2"></div>
+                                    </div>
+                                </div>
+                                <!-- Animation -->
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="show-img1 no-d-mobile d-d-desktop w-100 px-16 pt-16 pb-0">
+                                <picture>
+                                    <source srcset="{% static 'images/edubest-mockup.webp' %}"
+                                        type="image/webp">
+                                    <img class="img-fluid" src="{% static 'images/edubest-mockup.png' %}"
+                                        alt="Kubera Parivar">
+                                </picture>
+                                <!-- Animation -->
+                                <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-l-2"></div>
+                                    </div>
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-r-2"></div>
+                                    </div>
+                                </div>
+                                <!-- Animation -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animation -->
+                <div class="border-bottom-animation  z-index-2 no-d-mobile d-desktop ">
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-l-2"></div>
+                    </div>
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-r-2"></div>
+                    </div>
+                </div>
+                <!-- Animation -->
+            </div>
+            <div class="animate-2-top">
+                <div class="container-margin show-border-f p-0">
+                    <div class="ai-video2 content-video d-desktop no-d-mobile position-relative px-16 pt-16 pb-0">
+                        <video class="w-100 d-block" autoplay muted loop playsinline
+                            preload="none" poster="{% static 'images/iconic-city-website-thumb.jpg' %}"
+                            controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback">
+                            <source src="{% static 'images/iconic-city-website.mp4' %}" type="video/mp4">
+                        </video>
+                        <!-- <div class="ai-play-button"></div> -->
+                        <!-- Animation -->
+                        <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                            <div class="w-50 position-relative border-bottom-animation-b">
+                                <div class="border-bottom-animation-l-2"></div>
+                            </div>
+                            <div class="w-50 position-relative border-bottom-animation-b">
+                                <div class="border-bottom-animation-r-2"></div>
+                            </div>
+                        </div>
+                        <!-- Animation -->
+                    </div>
+                    <div class="show-img1 no-d-desktop d-mobile w-100 px-16 pt-16 pb-0">
+                        <picture>
+                            <source srcset="{% static 'images/iconic-city-billboard.webp' %}" type="image/webp">
+                            <img class="img-fluid" src="{% static 'images/iconic-city-billboard.jpg' %}"
+                                alt="Iconic City Billboard">
+                        </picture>
+                        <!-- Animation -->
+                        <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                            <div class="w-50 position-relative border-bottom-animation-b">
+                                <div class="border-bottom-animation-l-2"></div>
+                            </div>
+                            <div class="w-50 position-relative border-bottom-animation-b">
+                                <div class="border-bottom-animation-r-2"></div>
+                            </div>
+                        </div>
+                        <!-- Animation -->
+                    </div>
+                </div>
+                <!-- Animation -->
+                <div class="border-bottom-animation  z-index-2 no-d-mobile d-desktop ">
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-l-2"></div>
+                    </div>
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-r-2"></div>
+                    </div>
+                </div>
+                <!-- Animation -->
+            </div>
+            <div class="animate-2-top d-mobile d-desktop">
+                <div class="container-margin show-border-f p-0">
+                    <div class="show-img1 no-d-desktop d-mobile w-100 px-16 pt-16 pb-0">
+                        <picture>
+                            <source srcset="{% static 'images/sree-pooja-mockup-tablet.webp' %}" type="image/webp">
+                            <img class="img-fluid" src="{% static 'images/sree-pooja-mockup-tablet.jpg' %}"
+                                alt="Sree Pooja Premium Website">
+                        </picture>
+                        <!-- Animation -->
+                        <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                            <div class="w-50 position-relative border-bottom-animation-b">
+                                <div class="border-bottom-animation-l-2"></div>
+                            </div>
+                            <div class="w-50 position-relative border-bottom-animation-b">
+                                <div class="border-bottom-animation-r-2"></div>
+                            </div>
+                        </div>
+                        <!-- Animation -->
+                    </div>
+                </div>
+            </div>
+            <div class="animate-2-top">
+                <div class="container-margin show-border-f p-0">
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <div class="show-img1 d-desktop no-d-mobile w-100 px-16 pt-16 pb-0">
+                                <picture>
+                                    <source srcset="{% static 'images/tablet-mockup.webp' %}" type="image/webp">
+                                    <img class="img-fluid" src="{% static 'images/tablet-mockup.png' %}" alt="Iconic City 2">
+                                </picture>
+                                <!-- Animation -->
+                                <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-l-2"></div>
+                                    </div>
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-r-2"></div>
+                                    </div>
+                                </div>
+                                <!-- Animation -->
+                            </div>
+                            <div class="show-img1 no-d-desktop d-mobile w-100 px-16 pt-16 pb-0">
+                                <picture>
+                                    <source srcset="{% static 'images/tablet-mockup-4.webp' %}" type="image/webp">
+                                    <img class="img-fluid" src="{% static 'images/tablet-mockup-4.jpg' %}"
+                                        alt="Iconic City News">
+                                </picture>
+                                <!-- Animation -->
+                                <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-l-2"></div>
+                                    </div>
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-r-2"></div>
+                                    </div>
+                                </div>
+                                <!-- Animation -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animation -->
+                <div class="border-bottom-animation  z-index-2 no-d-mobile d-desktop ">
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-l-2"></div>
+                    </div>
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-r-2"></div>
+                    </div>
+                </div>
+                <!-- Animation -->
+            </div>
+            <div class="animate-2-top">
+                <div class="container-margin show-border-f p-0">
+                    <div class="row g-0">
+                        {% comment %} <div class="col-lg-5 col-12 border-r">
+                            <div>
+                                <div class="show-img1 w-100 px-16 pt-16 pb-0">
+                                    <picture>
+                                        <source srcset="{% static 'images/1.webp' %}" type="image/webp">
+                                        <img loading="lazy" class="img-fluid" src="{% static 'images/1.png' %}" alt="Iconic City">
+                                    </picture>
+                                    <!-- Animation -->
+                                    <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                        <div class="w-50 position-relative border-bottom-animation-b">
+                                            <div class="border-bottom-animation-l-2"></div>
+                                        </div>
+                                        <div class="w-50 position-relative border-bottom-animation-b">
+                                            <div class="border-bottom-animation-r-2"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Animation -->
+                                </div>
+                            </div>
+                        </div> {% endcomment %}
+                        <div class="col-lg-12 col-12">
+                            <div
+                                class="ai-video2 content-video d-desktop no-d-mobile position-relative px-16 pt-16 pb-0">
+                                <video class="w-100 d-block" muted loop playsinline
+                                    preload="none" poster="{% static 'images/kubhera-parvivar-thumb.png' %}"
+                                    controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback">
+                                    <source src="{% static 'images/kubhera-parvivar.mp4' %}" type="video/mp4">
+                                </video>
+                                <!-- <div class="ai-play-button"></div> -->
+                                <!-- Animation -->
+                                <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-l-2"></div>
+                                    </div>
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-r-2"></div>
+                                    </div>
+                                </div>
+                                <!-- Animation -->
+                            </div>
+                            <div class="show-img1 no-d-desktop d-mobile w-100 px-16 pt-16 pb-0">
+                                <picture>
+                                    <source srcset="{% static 'images/kubera-parivar-brochure-mockup.webp' %}"
+                                        type="image/webp">
+                                    <img class="img-fluid" src="{% static 'images/kubera-parivar-brochure-mockup.jpg' %}"
+                                        alt="Kubera Parivar">
+                                </picture>
+                                <!-- Animation -->
+                                <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-l-2"></div>
+                                    </div>
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-r-2"></div>
+                                    </div>
+                                </div>
+                                <!-- Animation -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animation -->
+                <div class="border-bottom-animation  z-index-2 no-d-mobile d-desktop ">
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-l-2"></div>
+                    </div>
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-r-2"></div>
+                    </div>
+                </div>
+                <!-- Animation -->
+            </div>
+            <div class="animate-2-top">
+                <div class="container-margin show-border-f p-0">
+                    <div class="row g-0">
+                        <div class="col-lg-7 col-12 border-r">
+                            <div>
+                                <div class="show-img1 w-100 px-16 pt-16 pb-0">
+                                    <picture>
+                                        <source srcset="{% static 'images/paints-mck.webp' %}" type="image/webp">
+                                        <img class="img-fluid" src="{% static 'images/paints-mck.png' %}" alt="Paints">
+                                    </picture>
+                                    <!-- Animation -->
+                                    <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                        <div class="w-50 position-relative border-bottom-animation-b">
+                                            <div class="border-bottom-animation-l-2"></div>
+                                        </div>
+                                        <div class="w-50 position-relative border-bottom-animation-b">
+                                            <div class="border-bottom-animation-r-2"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Animation -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-12">
+                            <div
+                                class="ai-video2 content-video d-desktop no-d-mobile position-relative px-16 pt-16 pb-0">
+                                <video class="w-100 d-block" muted loop playsinline
+                                    preload="none" poster="{% static 'images/rocket-video-thumb.png' %}"
+                                    controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback">
+                                    <source src="{% static 'images/rocket-video.mp4' %}" type="video/mp4">
+                                </video>
+                                <!-- <div class="ai-play-button"></div> -->
+                                <!-- Animation -->
+                                <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-l-2"></div>
+                                    </div>
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-r-2"></div>
+                                    </div>
+                                </div>
+                                <!-- Animation -->
+                            </div>
+                            {% comment %} <div class="show-img1 no-d-desktop d-mobile w-100 px-16 pt-16 pb-0">
+                                <picture>
+                                    <source srcset="{% static 'images/iconic-city-light-board.webp' %}" type="image/webp">
+                                    <img loading="lazy" class="img-fluid" src="{% static 'images/iconic-city-light-board.jpg' %}"
+                                        alt="Iconic City Bill Board">
+                                </picture>
+                                <!-- Animation -->
+                                <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-l-2"></div>
+                                    </div>
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-r-2"></div>
+                                    </div>
+                                </div>
+                                <!-- Animation -->
+                            </div> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+                <!-- Animation -->
+                <div class="border-bottom-animation  z-index-2 no-d-mobile d-desktop ">
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-l-2"></div>
+                    </div>
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-r-2"></div>
+                    </div>
+                </div>
+                <!-- Animation -->
+            </div>
+            <div class="animate-2-top">
+                <div class="container-margin show-border-f px-0"><!-- border-r-p-2 -->
+                    <div class="row g-0">
+                        <div class="col-lg-5 col-12 border-r">
+                            <div>
+                                <div class="show-img1 w-100 px-16 pt-16 pb-0">
+                                    <picture>
+                                        <source srcset="{% static 'images/bill-board-mockup.webp' %}" type="image/webp">
+                                        <img class="img-fluid" src="{% static 'images/bill-board-mockup.png' %}"
+                                            alt="Iconic City 3">
+                                    </picture>
+                                    <!-- Animation -->
+                                    <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                        <div class="w-50 position-relative border-bottom-animation-b">
+                                            <div class="border-bottom-animation-l-2"></div>
+                                        </div>
+                                        <div class="w-50 position-relative border-bottom-animation-b">
+                                            <div class="border-bottom-animation-r-2"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Animation -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-12">
+                            <div
+                                class="ai-video2 content-video d-desktop no-d-mobile position-relative px-16 pt-16 pb-0">
+                                <video class="w-100 d-block" muted loop playsinline
+                                    preload="none" poster="{% static 'images/evergreen-naturals-thumb.jpg' %}"
+                                    controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback">
+                                    <source src="{% static 'images/evergreen-naturals.mp4' %}" type="video/mp4">
+                                </video>
+                                <!-- <div class="ai-play-button"></div> -->
+                                <!-- Animation -->
+                                <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-l-2"></div>
+                                    </div>
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-r-2"></div>
+                                    </div>
+                                </div>
+                                <!-- Animation -->
+                            </div>
+                            <div class="show-img1 no-d-desktop d-mobile w-100 px-16 pt-16 pb-0">
+                                <picture>
+                                    <source srcset="{% static 'images/best-iu-brochure-mockup.webp' %}" type="image/webp">
+                                    <img class="img-fluid" src="{% static 'images/best-iu-brochure-mockup.jpg' %}"
+                                        alt="BESTIU Brochure">
+                                </picture>
+                                <!-- Animation -->
+                                <div class="border-bottom-animation  z-index-2 no-d-desktop pt-16">
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-l-2"></div>
+                                    </div>
+                                    <div class="w-50 position-relative border-bottom-animation-b">
+                                        <div class="border-bottom-animation-r-2"></div>
+                                    </div>
+                                </div>
+                                <!-- Animation -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Animation -->
+                <div class="border-bottom-animation  z-index-2 no-d-mobile d-desktop ">
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-l-2"></div>
+                    </div>
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-r-2"></div>
+                    </div>
+                </div>
+                <!-- Animation -->
+            </div>
+            <div class="animate-2-top">
+                <div class="container-margin show-border-f px-0"><!-- border-l-p-2 -->
+                    <div class="ai-video2 content-video d-desktop no-d-mobile position-relative px-16 py-16">
+                        <video class="w-100 d-block" muted loop playsinline preload="none"
+                            poster="{% static 'images/ocean-day-thumb.png' %}"
+                            controlslist="nodownload noremoteplayback disablepictureinpicture disableremoteplayback">
+                            <source src="{% static 'images/ocean-day.mp4' %}" type="video/mp4">
+                        </video>
+                        <!-- <div class="ai-play-button"></div> -->
+
+                    </div>
+                    <div class="show-img1 no-d-desktop d-mobile w-100 px-16 py-16">
+                        <picture>
+                            <source srcset="{% static 'images/subway-billboard.webp' %}" type="image/webp">
+                            <img class="img-fluid" src="{% static 'images/subway-billboard.jpg' %}" alt="Sree Pooja Parktown">
+                        </picture>
+                    </div>
+                </div>
+                <!-- Animation -->
+                <div class="border-bottom-animation">
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-l-2"></div>
+                    </div>
+                    <div class="w-50 position-relative border-bottom-animation-b">
+                        <div class="border-bottom-animation-r-2"></div>
+                    </div>
+                </div>
+                <!-- Animation -->
+            </div>
+        </section>
+        <!-- Section 4 ends -->
+
+        <!-- Section 5 -->
+        <section class="section5">
+            <div class="container-margin show-b-t w-client">
+                <div class="row">
+                    <div class="col-12 animate-2-top">
+                        <h2 class="testi-title text-start display-1 fw-600 ms-3 text-animate">What our Clients say</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="container testi-caro">
+                            <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="position-relative w-100">
+                                    <!-- Testimonial Item 1 -->
+                                    <div class="carousel-item active animate-2-top">
+                                        <div>
+                                            <div>
+                                                <p class="card-text testi-content pb-3">"During our partnership with The Accretio, we were shown promising new ways to market our company. Their hardworking team has always answered the calls even if its 12AM in the midnight and delivered the results on time. We would highly recommend them to other companies who need to establish or increase their social media presence."</p>
+                                                <div class="row mt-5">
+                                                    <div class="col-md-auto d-flex flex-column">
+                                                        <h5 class="client-name card-title fw-600">Vijay</h5>
+                                                        <span class="client-designation">BEST Group</span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="title-line2 line-x">
+                                                            <div class="line3"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial Item 2 -->
+                                    <div class="carousel-item animate-2-top">
+                                        <div>
+                                            <div>
+                                                <p class="card-text testi-content pb-3">"We wanted to enhance our online presence so we turned to The Accretio!  They did that and so much more by suggesting other options that included offline Marketing ideas. Simply their team care about you for each of the penny you pay."</p>
+                                                <div class="row mt-5">
+                                                    <div class="col-md-auto d-flex flex-column">
+                                                        <h5 class="client-name card-title fw-600">Naveen</h5>
+                                                        <span class="client-designation">Iconic City</span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="title-line2 line-x">
+                                                            <div class="line3"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial Item 3 -->
+                                    <div class="carousel-item animate-2-top">
+                                        <div>
+                                            <div>
+                                                <p class="card-text testi-content pb-3">"Their creative team is one of the bests I have come across!! Thanks to Accretio, we have been able to deliver projects on time and within budget consistently."</p>
+                                                <div class="row mt-5">
+                                                    <div class="col-md-auto d-flex flex-column">
+                                                        <h5 class="client-name card-title fw-600">Sujina</h5>
+                                                        <span class="client-designation">AnataraCares</span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="title-line2 line-x">
+                                                            <div class="line3"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial Item 4 -->
+                                    {% comment %} <div class="carousel-item animate-2-top">
+                                        <div>
+                                            <div>
+                                                <p class="card-text testi-content pb-3">"Accretio has made project
+                                                    management a breeze for our remote team. The cloud-based
+                                                    platform allows
+                                                    us to work seamlessly from anywhere, ensuring everyone stays
+                                                    connected
+                                                    and informed. The real-time updates and notifications keep us on
+                                                    track
+                                                    and enable us to adapt to changes quickly."</p>
+                                                <div class="row mt-5">
+                                                    <div class="col-md-auto d-flex flex-column">
+                                                        <h5 class="client-name card-title fw-600">Michael Lewis</h5>
+                                                        <span class="client-designation">Freelance Consultant</span>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="title-line2 line-x">
+                                                            <div class="line3"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> {% endcomment %}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 5 ends -->
+
+        <!-- Section 6 -->
+        <section class="about-section8">
+            <div class="container-margin">
+                <div class="show-b-t w-client">
+                    <div class="row">
+                        <div class="col-lg-8 d-flex align-items-center animate-2-top">
+                            <h3 class="h1">We are a Creative, Growth and Performance based Marketing agency
+                                that caters
+                                to
+                                aspirational consumers.</h3>
+                        </div>
+                        <div class="col-lg-2 col-6 g-0 mt-sm-3 d-flex about-bottom-card-m">
+                            <div class="card1 d-flex justify-content-center animate-2-top">
+                                <a onclick="Calendly.initPopupWidget({url: 'https://calendly.com/the-accretio-appointment/schedule-a-meeting'});return false;"
+                                    class="schedule" style="cursor: pointer;">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-top d-flex">
+                                                <h5 class="card-title pb-4 h6">Schedule a meeting.</h5>
+                                                <!-- <div class="card-arrow">
+                                                <i class="fa-solid fa-arrow-right-long"></i>
+                                            </div> -->
+                                            </div>
+                                            <p class="card-text">let’s connect</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-6 g-0 mt-sm-3 d-flex about-bottom-card-m">
+                            <div class="card1 card2 d-flex justify-content-center animate-2-top">
+                                <a href="{% url 'letsconnect' %}" class="schedule">
+                                    <div id="card2" class="card">
+                                        <div class="card-body">
+                                            <div class="card-top d-flex">
+                                                <h5 class="card-title pb-4 pe-3 h6">Contact to elevate.</h5>
+                                                <!-- <div class="card-arrow">
+                                                <i class="fa-solid fa-arrow-right-long"></i>
+                                            </div> -->
+                                            </div>
+                                            <p class="card-text">let’s connect</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 6 ends -->
+    {% endblock %}

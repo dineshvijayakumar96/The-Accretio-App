@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Join our Club | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block meta-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+{% block canonical-link %}https://theaccretio.com/about-you/join-our-club{% endblock %}
+{% block og-url %}https://theaccretio.com/about-you/join-our-club{% endblock %}
+{% block og-title %}Join our Club | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block og-sitename %}Join our Club | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block og-imgalt %}Join our Club | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block og-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+{% block twitter-imgalt %}Join our Club | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block twitter-title %}Join our Club{% endblock %}
+{% block twitter-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+
+{% block content %}
+<!-- Club section 1 -->
+<section class="club-section1 margin-top-nav">
+    <div>
+        <div class="container-margin show-border-f p-0">
+            <!-- Animation -->
+            <div class="border-bottom-animation d-flex">
+                <div class="w-50 position-relative border-bottom-animation-b">
+                    <div class="border-bottom-animation-l-2"></div>
+                </div>
+                <div class="w-50 position-relative border-bottom-animation-b">
+                    <div class="border-bottom-animation-r-2"></div>
+                </div>
+            </div>
+            <!-- Animation -->
+            <div class="row g-0">
+                <div class="col-12 d-flex justify-content-center border-r about-subtext">
+                    <div class="about-subtext-3">
+                        <h1 class="about-subtext-p text-start club-text-p animate-2-top">Through The Accretio Club,
+                            new business partnerships are created via strategic alignment, joint
+                            collaborations,product placements, endorsements, media sharing, B2B and B2C networking,
+                            sales and luxury showcase events.</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Club section 1 ends -->
+
+<!-- Club section 2 -->
+<section class="club-section1">
+    <div>
+        <div class="container-margin show-border-f p-0">
+            <!-- Animation -->
+            <div class="border-bottom-animation d-flex">
+                <div class="w-50 position-relative border-bottom-animation-b">
+                    <div class="border-bottom-animation-l-2"></div>
+                </div>
+                <div class="w-50 position-relative border-bottom-animation-b">
+                    <div class="border-bottom-animation-r-2"></div>
+                </div>
+            </div>
+            <!-- Animation -->
+            <div class="row g-0">
+                <div class="col-lg-7 about-subtext">
+                    <div id="thankyou" class="success-message text-center text-success"
+                        style="display: flex; justify-content: center; align-items: center;">
+                        {{ thankyou | safe }}
+                    </div>
+                    {% comment %} <form id="contact-club" action="{% url 'joinourclub' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-floating mb-3 animate-2-top">
+                            <input type="text" class="form-control rounded-0 border-dark" id="floatingInput"
+                                name="name" placeholder="*Name" required>
+                            <label for="floatingInput">*Name</label>
+                        </div>
+                        <div class="form-floating mb-3 animate-2-top">
+                            <input type="text" class="form-control rounded-0 border-dark" id="floatingInput2"
+                                name="company" placeholder="*Company" required>
+                            <label for="floatingInput2">*Company</label>
+                        </div>
+                        <div class="form-floating mb-3 animate-2-top">
+                            <input type="text" class="form-control rounded-0 border-dark" id="floatingInput3"
+                                name="email" placeholder="*E-Mail" required>
+                            <label for="floatingInput3">*E-Mail</label>
+                        </div>
+                        <div class="form-floating mb-3 animate-2-top">
+                            <input type="text" class="form-control rounded-0 border-dark" id="floatingInput4"
+                                name="phone" placeholder="*Phone Number" required>
+                            <label for="floatingInput4">*Phone Number</label>
+                        </div>
+                        <div class="mb-3 p-3 border border-1 border-dark animate-2-top">
+                            <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
+                            <textarea class="form-control rounded-0 border-0 bg-comment"
+                                id="exampleFormControlTextarea1" name="comment" rows="6"></textarea>
+                        </div>
+                        <div class="mb-3 animate-2-top">
+                            <p class="club-contact-p">In submitting this form, you are agreeing to Accretio's <a
+                                    class="text-dark text-decoration-underline" href="#">Privacy Policy.</a></p>
+                        </div>
+                        <button type="submit"
+                            class="connect-btn-black text-decoration-none animate-2-top">Submit</button>
+                    </form> {% endcomment %}
+                    <form id="contact-club" action="{% url 'joinourclub' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-floating mb-3 animate-2-top">
+                            {{ form.name }}
+                            <label for="floatingInput">*Name</label>
+                        </div>
+                        <div class="form-floating mb-3 animate-2-top">
+                            {{ form.company }}
+                            <label for="floatingInput2">*Company</label>
+                        </div>
+                        <div class="form-floating mb-3 animate-2-top">
+                            {{ form.email }}
+                            <label for="floatingInput3">*E-Mail</label>
+                        </div>
+                        <div class="form-floating mb-3 animate-2-top">
+                            {{ form.phone }}
+                            <label for="floatingInput4">*Phone Number</label>
+                        </div>
+                        <div class="mb-3 p-3 border border-1 border-dark animate-2-top">
+                            <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
+                            {{ form.comment }}
+                        </div>
+                        {{ form.captcha }}
+                        {% for error in form.captcha.errors %}
+                        <p>{{ error }}</p>
+                        {% endfor %}
+                        <div class="mb-3 animate-2-top">
+                            <p class="club-contact-p">In submitting this form, you are agreeing to Accretio's <a
+                                    class="text-dark text-decoration-underline" href="#">Privacy Policy.</a></p>
+                        </div>
+                        <button type="submit" class="connect-btn-black text-decoration-none animate-2-top">Submit</button>
+                    </form>                    
+                </div>
+                <div class="col-lg-4 d-flex justify-content-center align-items-center animate-2-top">
+                    <div class="club-image d-desktop no-d-mobile">
+                        <picture>
+                            <source srcset="{% static 'images/planet.webp' %}" type="image/webp">
+                            <img loading="lazy" class="img-fluid" src="{% static 'images/planet.png' %}" alt="Network Planet Globe">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <!-- Animation -->
+            <div class="border-bottom-animation d-flex">
+                <div class="w-50 position-relative border-bottom-animation-b">
+                    <div class="border-bottom-animation-l-2"></div>
+                </div>
+                <div class="w-50 position-relative border-bottom-animation-b">
+                    <div class="border-bottom-animation-r-2"></div>
+                </div>
+            </div>
+            <!-- Animation -->
+        </div>
+    </div>
+</section>
+<!-- Club section 2 ends -->
+
+<!-- Club Section 3 -->
+<section class="about-section8">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 d-flex align-items-center animate-2-top">
+                <h3>We take pride in the relationships we build and the impact we make, and we invite you to be part
+                    of our success story.</h3>
+            </div>
+            <div class="col-lg-2 col-6 g-0 mt-sm-3 d-flex about-bottom-card-m">
+                <div class="card1 d-flex justify-content-center animate-2-top">
+                    <a onclick="Calendly.initPopupWidget({url: 'https://calendly.com/the-accretio-appointment/schedule-a-meeting'});return false;"
+                        class="schedule" style="cursor: pointer;">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-top d-flex">
+                                    <h5 class="card-title pb-4 h6">Schedule a meeting.</h5>
+                                    <!-- <div class="card-arrow">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </div> -->
+                                </div>
+                                <p class="card-text">let’s connect</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-6 g-0 mt-sm-3 d-flex about-bottom-card-m">
+                <div class="card1 card2 d-flex justify-content-center animate-2-top">
+                    <a href="{% url 'letsconnect' %}" class="schedule">
+                        <div id="card2" class="card">
+                            <div class="card-body">
+                                <div class="card-top d-flex">
+                                    <h5 class="card-title pb-4 pe-3 h6">Contact to elevate.</h5>
+                                    <!-- <div class="card-arrow">
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </div> -->
+                                </div>
+                                <p class="card-text">let’s connect</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Club Section 3 Ends -->
+{% endblock %}

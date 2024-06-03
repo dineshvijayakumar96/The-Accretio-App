@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Let's Connect | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block meta-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+{% block canonical-link %}https://theaccretio.com/lets-connect{% endblock %}
+{% block og-url %}https://theaccretio.com/lets-connect{% endblock %}
+{% block og-title %}Let's Connect | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block og-sitename %}Let's Connect | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block og-imgalt %}Let's Connect | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block og-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+{% block twitter-imgalt %}Let's Connect | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block twitter-title %}Let's Connect{% endblock %}
+{% block twitter-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+
+{% block content %}
+<!-- ****** -->
+<section class="letsconnect-section-1">
+    <div
+        class="container-margin show-border-f letsconnect-title">
+        <div class="c-title animate-2-top px-3" id="c-title">
+            <h1 class="letsconnect-p py-5">We work at the intersection of creativity, behavioural science and
+                analytics.
+                Our
+                team understands the nuances of influencing Human behaviour, strengthening the brand image across
+                Digital
+                and Traditional media and more important, driving commercial results.</h1>
+        </div>
+    </div>
+    <!-- Animation -->
+    <div class="border-bottom-animation d-flex">
+        <div class="w-50 position-relative border-bottom-animation-b">
+            <div class="border-bottom-animation-l-2"></div>
+        </div>
+        <div class="w-50 position-relative border-bottom-animation-b">
+            <div class="border-bottom-animation-r-2"></div>
+        </div>
+    </div>
+    <!-- Animation -->
+    <div class="container-margin contact-form py-5 px-3 border-start border-end border-dark">
+        <!-- <div class="success-message text-center text-success px-3"
+            style="display: flex; grid-column-start: 2; align-items: center;">
+            <p class="bg-success text-white">Thank you for submitting the form. Our team will get back to you
+                shortly.
+            </p>
+        </div> -->
+        <div id="thankyou" class="success-message text-center text-success"
+                        style="display: flex; justify-content: center; align-items: center;">
+                        {{ thankyou | safe }}
+                    </div>
+        {% comment %} <div class="contact-form-m px-3">
+            <form class="letsconnect-form row g-3" action="{% url 'letsconnect' %}" method="post">
+                {% csrf_token %}
+                <div class="col-md-12 mt-3 animate-2-top">
+                    <input type="text" name="name" class="form-control ." placeholder="*Name"
+                        aria-label="First name" required>
+                </div>
+                <div class="col-md-12 mt-3 animate-2-top">
+                    <input type="email" name="email" class="form-control ." id="inputEmail4" placeholder="*Email"
+                        aria-label="Email" required>
+                </div>
+                <div class="col-md-12 mt-3 animate-2-top">
+                    <input type="text" name="company" class="form-control ." placeholder="*Company"
+                        aria-label="Company" required>
+                </div>
+                <div class="col-md-12 mt-3 animate-2-top">
+                    <textarea name="message" class="form-control ." aria-label="With textarea"
+                        placeholder="Message (optional)"></textarea>
+                </div>
+                <div class="col-12 mt-3 animate-2-top">
+                    <button type="submit" class="connect-btn-2">Send <i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </form>
+        </div> {% endcomment %}
+
+        <div class="contact-form-m px-3">
+            <form class="letsconnect-form row g-3" action="{% url 'letsconnect' %}" method="post">
+                {% csrf_token %}
+                <div class="col-md-12 mt-3 animate-2-top">
+                    {{ form.name }}
+                </div>
+                <div class="col-md-12 mt-3 animate-2-top">
+                    {{ form.email }}
+                </div>
+                <div class="col-md-12 mt-3 animate-2-top">
+                    {{ form.company }}
+                </div>
+                <div class="col-md-12 mt-3 animate-2-top">
+                    {{ form.message }}
+                </div>
+                {% comment %} {{ form.captcha }}
+                {% for error in form.captcha.errors %}
+                <p>{{ error }}</p>
+                {% endfor %} {% endcomment %}
+                <div class="col-12 mt-3 animate-2-top">
+                    <button type="submit" class="connect-btn-2">Send <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </form>
+        </div>        
+
+        <div class="contact-info px-3">
+            <h2 class=" border-bottom border-dark pb-4 animate-2-top">To know more ?</h2>
+            <p class="mt-1 h5  border-bottom border-dark pb-4 animate-2-top">Become our client <br><a
+                    class="text-dark h5" href="mailto:business@theaccretio.com">business@theaccretio.com</a></p>
+            <p class="mt-1 h5  border-bottom border-dark pb-4 animate-2-top">Join our team <br><a
+                    class="text-dark h5" href="mailto:jobs@theaccretio.com">jobs@theaccretio.com</a></p>
+            <p class="mt-1 h5  border-bottom border-dark pb-4 animate-2-top">Give us a call <br><a
+                    class="text-dark h5" href="tel:+917904087668">79040 87668</a></p>
+            <p class="mt-1 h5 animate-2-top">Expert consultation <br><a class="text-dark h6 connect-mail"
+                    href="mailto:Karthikeyan.murugan@theaccretio.com">Karthikeyan.murugan@theaccretio.com</a><br><a
+                    class="text-dark h6"
+                    href="mailto:Sudhakar.sampath@theaccretio.com">Sudhakar.sampath@theaccretio.com</a></p>
+        </div>
+    </div>
+</section>
+<!-- ****** -->
+{% endblock %}

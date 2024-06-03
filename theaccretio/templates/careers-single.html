@@ -1,0 +1,133 @@
+{% extends 'base_careers_single.html' %}
+{% load static %}
+{% block title %}{{ job_post.title }} {{ job_post.subtitle }} | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block meta-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+{% block canonical-link %}https://theaccretio.com/careers{% endblock %}
+{% block og-url %}https://theaccretio.com/careers{% endblock %}
+{% block og-title %}{{ job_post.title }} {{ job_post.subtitle }} | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block og-sitename %}{{ job_post.title }} {{ job_post.subtitle }} | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block og-imgalt %}{{ job_post.title }} {{ job_post.subtitle }} | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block og-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+{% block twitter-imgalt %}{{ job_post.title }} {{ job_post.subtitle }} | The Accretio | Branding. Creative. Atelier.{% endblock %}
+{% block twitter-title %}{{ job_post.title }} {{ job_post.subtitle }}{% endblock %}
+{% block twitter-description %}A boutique Branding and Creative Atelier based in Bangalore, South India working globally. Strategic in approach. Innovative in craft.{% endblock %}
+
+{% block content %}
+<section class="careers-single">
+    <div class="d-flex justify-content-center">
+        <div class="careers-single-container my-4">
+            <div class="container-margin">
+                <div class="row">
+                    <div class="col-lg-9 col-8">
+                        <div class="acc-logo">
+                            <a class="navbar-brand" href="/"><img src="{% static 'images/accretio-logo.svg' %}"
+                                    class="h-100 w-auto" alt="The Accretio Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-4">
+                        <div><a href="#career-job-form"
+                                class="career-apply-btn btn btn-success fw-500 rounded-0">Apply Now</a></div>
+                    </div>
+                </div>
+                <div class="careers-single-content py-4">
+                    <div class="careers-single-t">
+                        <h1 class="fs-2">{{ job_post.title }} {{ job_post.subtitle }}</h1>
+                        <span class="fs-6 fw-600">at The Accretio <a class="text-primary text-decoration-none"
+                                href="{% url 'yourcareer' %}">(View all jobs)</a></span>
+                    </div>
+                    <div class="careers-single-place">
+                        <h2 class="fs-6 text-secondary">{{ job_post.country }}</h2>
+                        <h3 class="fs-6 fw-600">Location: {{ job_post.location }}</h3>
+                        <h4 class="fs-6 fw-600 text-decoration-underline">How we think about design at The Accretio.
+                        </h4>
+                        <p>The Accretio is a little different to most companies. That’s because we operate a
+                            borderless business, unconstrained by offices or geographies. Instead, our people work
+                            from wherever they choose, attracting the very best talent from every corner of the
+                            world. So, no matter where you’re located, we’re ready to work with you. We want you to
+                            do the best work of your career as part of our global team. The Accretio is a 100%
+                            flexible work environment. That means you can join us from anywhere in the world as long
+                            as you are eligible to do so.</p>
+                        <h4 class="fs-6 fw-600 text-decoration-underline">Job Description.</h4>
+                        <p>{{ job_post.description }}</p>
+                        <ul>
+                            {% for line in requirements_lines %}
+                                <li>{{ line }}</li>
+                            {% endfor %}
+                        </ul>                                             
+                    </div>
+                </div>
+                <div class="application-form p-4 mb-4 bg-light">
+                    <div class="row mb-3">
+                        <div class="col-lg-9 col-8">
+                            <h4 class="fs-5 fw-600">Apply for this Job.</h4>
+                        </div>
+                        <div class="col-lg-3 col-4 d-flex justify-content-end">
+                            <p class="career-form-span"><span class="text-danger">*</span> Required</p>
+                        </div>
+                    </div>
+                    <form id="career-job-form" class="career-job-form row g-3" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <div class="col-md-12 d-flex justify-content-end align-items-center">
+                            <label for="id_first_name" class="form-label px-3 fw-500 career-job-label">First Name<span class="text-danger">*</span></label>
+                            {{ form.first_name }}
+                        </div>
+                    
+                        <div class="col-md-12 d-flex justify-content-end align-items-center">
+                            <label for="id_last_name" class="form-label px-3 fw-500 career-job-label">Last Name<span class="text-danger">*</span></label>
+                            {{ form.last_name }}
+                        </div>
+                    
+                        <div class="col-md-12 d-flex justify-content-end align-items-center">
+                            <label for="id_email" class="form-label px-3 fw-500 career-job-label">Email<span class="text-danger">*</span></label>
+                            {{ form.email }}
+                        </div>
+                    
+                        <div class="col-md-12 d-flex justify-content-end align-items-center">
+                            <label for="id_phone" class="form-label px-3 fw-500 career-job-label">Phone<span class="text-danger">*</span></label>
+                            {{ form.phone }}
+                        </div>
+                    
+                        <div class="col-md-12 d-flex justify-content-end align-items-center">
+                            <label for="id_location" class="form-label px-3 fw-500 career-job-label">Location<span class="text-danger">*</span></label>
+                            {{ form.location }}
+                        </div>
+                    
+                        <div class="col-md-12 d-flex justify-content-end align-items-center">
+                            <label for="id_resume" class="form-label px-3 fw-500 career-job-label">Resume/CV<span class="text-danger">*</span></label>
+                            {{ form.resume }}
+                            <div class="invalid-feedback">Invalid CV.pdf file</div>
+                        </div>
+                    
+                        <div class="col-md-12 d-flex justify-content-end align-items-center">
+                            <label for="id_cover_letter" class="form-label px-3 fw-500 career-job-label">Cover Letter</label>
+                            {{ form.cover_letter }}
+                            <div class="invalid-feedback">Invalid file</div>
+                        </div>
+                    
+                        {{ form.captcha }}
+                        {% for error in form.captcha.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+
+                        <!-- Display errors for individual fields -->
+                        {% for field in form %}
+                            {% if field.errors %}
+                                <div class="alert alert-danger mb-0" role="alert">
+                                    <ul class="mb-1">
+                                        <li>{{ field.label }}: {{ field.errors|join:", " }}</li>
+                                    </ul>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    
+                        <div class="col-12 d-flex justify-content-center justify-content-lg-end mt-4 pt-4 border-top">
+                            <button type="submit" class="btn btn-success fw-600 px-4 rounded-0">Submit Application</button>
+                        </div>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

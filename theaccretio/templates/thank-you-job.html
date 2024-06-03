@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Thank You | The Accretio | Branding. Creative. Atelier.{% endblock %}
+
+{% block content %}
+<!-- ****** -->
+<section class="letsconnect-section-1 letsconnect-section-bg d-flex justify-content-center align-items-center flex-column text-red">
+    <div class="thank-you-box">
+        <h1 class="thank-you-title display-1 avenir text-center fw-600">Thank You for Your Application!</h1>
+        <p class="thank-you-p sfpro fs-5 text-center">We appreciate your interest in the position. Our team will review your application, and if your qualifications match our needs, we will be in touch with you soon.</p>
+        <p class="thank-you-p sfpro fs-5 text-center">You will receive a confirmation email with the details you have entered.<br>
+            If you have any questions or concerns, please feel free to contact us at <a class="text-info" href="mailto:inquiry@theaccretio.com">inquiry@theaccretio.com</a>.</p>
+        {% comment %} <p class="thank-you-p sfpro fs-6 text-center"></p> {% endcomment %}
+        <div id="accretio-btn" class="accretio-btn text-center my-4">
+            <a href="/" class="accretio-button">Go Back Home</a>
+        </div>
+    </div>
+</section>
+<!-- ****** -->
+{% endblock %}

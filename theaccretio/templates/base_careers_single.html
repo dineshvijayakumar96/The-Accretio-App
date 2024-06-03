@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WNJMRSNH');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Stylesheets -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<!-- Calendly link widget end -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="description"
+        content="{% block meta-description %}{% endblock %}">
+    <meta name="keywords"
+        content="Artificial Intelligence, Social Media Marketing, Web Development, Customer Experience, Search Engine Optimization, Photography and Cinematography, Content Strategy, Design, Artificial Intelligence solutions, SEO strategies, Web development services, Enhanced customer experience, Professional photography, Effective SEO services, Website optimization, Custom web solutions, Visual storytelling, Search engine ranking, Digital marketing solutions, Creative content creation, SEO optimization, Responsive web design, Stunning visuals, Technical SEO, SEO analytics">
+    <link rel="canonical" href="{% block canonical-link %}{% endblock %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{% static 'images/fav/apple-touch-icon-57x57.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'images/fav/apple-touch-icon-114x114.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static 'images/fav/apple-touch-icon-72x72.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'images/fav/apple-touch-icon-144x144.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{% static 'images/fav/apple-touch-icon-60x60.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{% static 'images/fav/apple-touch-icon-120x120.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{% static 'images/fav/apple-touch-icon-76x76.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{% static 'images/fav/apple-touch-icon-152x152.png' %}" />
+    <link rel="icon" type="image/png" href="{% static 'images/fav/favicon-196x196.png' %}" sizes="196x196" />
+    <link rel="icon" type="image/png" href="{% static 'images/fav/favicon-96x96.png' %}" sizes="96x96" />
+    <link rel="icon" type="image/png" href="{% static 'images/fav/favicon-32x32.png' %}" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{% static 'images/fav/favicon-16x16.png' %}" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{% static 'images/fav/favicon-128.png' %}" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="{% static 'images/fav/mstile-144x144.png' %}" />
+    <meta name="msapplication-square70x70logo" content="{% static 'images/fav/mstile-70x70.png' %}" />
+    <meta name="msapplication-square150x150logo" content="{% static 'images/fav/mstile-150x150.png' %}" />
+    <meta name="msapplication-wide310x150logo" content="{% static 'images/fav/mstile-310x150.png' %}" />
+    <meta name="msapplication-square310x310logo" content="{% static 'images/fav/mstile-310x310.png' %}" />
+    <meta property="og:title" content="{% block og-title %}{% endblock %}" />
+    <meta property="og:site_name" content="{% block og-sitename %}{% endblock %}" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content="{% block og-url %}{% endblock %}" />
+    <meta property="og:description"
+        content="{% block og-description %}{% endblock %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://theaccretio.com/static/images/og.jpg" />
+    <meta property="og:image:secure_url" content="https://theaccretio.com/static/images/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="{% block og-imgalt %}{% endblock %}" />
+    <meta property="og:image:type" content="image/jpg" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{% block twitter-title %}{% endblock %}" />
+    <meta name="twitter:description"
+        content="{% block twitter-description %}{% endblock %}" />
+    <meta name="twitter:image" content="https://theaccretio.com/static/images/og.jpg" />
+    <meta name="twitter:image:alt" content="{% block twitter-imgalt %}{% endblock %}" />
+    <!-- Twitter Card -->
+</head>
+
+<body oncontextmenu="return true"> <!-- oncontextmenu="return false" -->
+    <div id="scroll2top"></div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns?id=GTM-WNJMRSNH" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navbar -->
+    {% comment %} {% include 'navbar.html' %} {% endcomment %}
+    <!-- Navbar-end -->
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!-- Footer -->
+    {% comment %} {% include 'footer.html' %} {% endcomment %}
+    <!-- Footer-end -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Thank You | The Accretio | Branding. Creative. Atelier.{% endblock %}
+
+{% block content %}
+<!-- ****** -->
+<section class="letsconnect-section-1 letsconnect-section-bg d-flex justify-content-center align-items-center flex-column text-red">
+    <div class="thank-you-box">
+        <h1 class="thank-you-title display-1 avenir text-center fw-600">Thank you!</h1>
+        <p class="thank-you-p sfpro fs-5 text-center">For submitting the form. Our team will get back to you
+            shortly.</p>
+        <div id="accretio-btn" class="accretio-btn text-center my-4">
+            <a href="{% url 'home' %}" class="accretio-button">Go Back Home</a>
+        </div>
+    </div>
+</section>
+<!-- ****** -->
+{% endblock %}

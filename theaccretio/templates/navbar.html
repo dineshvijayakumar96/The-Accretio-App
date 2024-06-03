@@ -1,0 +1,43 @@
+{% url 'aboutyou' as aboutyou %}
+{% url 'ourworks' as ourworks %}
+{% url 'expertise' as expertise %}
+{% url 'yourcareer' as yourcareer %}
+{% url 'letsconnect' as letsconnect %}
+
+{% load static %}
+<!-- '/our-works/i2c2' or request.path == '/our-works/iconic-city' or request.path == '/our-works/antaracares' or request.path == '/our-works/edubestonline' or request.path == '/our-works/best-innovation-university' -->
+<div class="navbar-contain">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light {% if request.path == request.path == '/lets-connect' or request.path == '/about-you/join-our-club' %}bg-black{% endif %}">
+        <!-- class - "animated-text" for bottom lines -->
+        <div id="navborder" class="container-fluid">
+            <a title="The Accretio" class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/accretio-logo.svg' %}"
+                    alt="The Accretio Logo"></a>
+            <!-- <button id="nav-btn-toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+            <!-- &#9776; -->
+            <span id="opennav" class="no-d-desktop d-mobile m-menu-trigger" style="font-size:30px;cursor:pointer"
+                ><i class="fa-solid fa-bars text-white"></i></span>
+            <div class="navbar-collapse justify-content-end sidenav" id="mySidenav">
+                <a href="javascript:void(0)" id="closenav" class="closebtn no-d-desktop d-mobile">&times;</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link navlink {% if request.path == aboutyou %} acc-active {% endif %}" href="{% url 'aboutyou' %}">About You</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navlink {% if request.path == ourworks %} acc-active {% endif %}" href="{% url 'ourworks' %}">Our Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navlink {% if request.path == expertise %} acc-active {% endif %}" href="{% url 'expertise' %}">Expertise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navlink {% if request.path == yourcareer %} acc-active {% endif %}" href="{% url 'yourcareer' %}">Your Career</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navlink {% if request.path == letsconnect %} acc-active {% endif %}" href="{% url 'letsconnect' %}">Let's Connect</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
