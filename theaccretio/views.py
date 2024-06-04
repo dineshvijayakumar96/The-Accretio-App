@@ -26,13 +26,13 @@ def aboutyou(request):
 #         #    'Message from Join Our Club | ' + name, # Subject
 #         #    'Name : '+ name + ' Company Name : ' + company + ' Phone : ' + phone + ' Comment : ' + comment + ' Email : ' + email, # Message
 #         #    email,
-#         #    ['karthikeyan.murugan@theaccretio.com'], # To Email
+#         #    ['dineshvijayakumar96@gmail.com'], # To Email
 #         #)
 
 #         # Email Setup
 #         subject = 'Message from Join Our Club | ' + name
-#         from_email = 'business@theaccretio.com'  # Set your email address here
-#         to_email = ['karthikeyan.murugan@theaccretio.com']
+#         from_email = 'dineshjustin95@gmail.com'  # Set your email address here
+#         to_email = ['dineshvijayakumar96@gmail.com']
 
 #         # Load the HTML template
 #         html_message = render_to_string('email_template.html', {'name': name, 'company': company, 'email': email, 'phone': phone, 'comment': comment})
@@ -75,8 +75,8 @@ def joinourclub(request):
 
             # Email Setup
             subject = 'Message from Join Our Club | ' + name
-            from_email = 'business@theaccretio.com'  # Set your email address here "business@theaccretio.com"
-            to_email = ['karthikeyan.murugan@theaccretio.com'] # Set your to email address here "karthikeyan.murugan@theaccretio.com"
+            from_email = 'dineshjustin95@gmail.com'  # Set your email address here "dineshjustin95@gmail.com"
+            to_email = ['dineshvijayakumar96@gmail.com'] # Set your to email address here "dineshvijayakumar96@gmail.com"
 
             # Load the HTML template
             html_message = render_to_string('email_template.html', {'name': name, 'company': company, 'email': email, 'phone': phone, 'comment': comment})
@@ -158,8 +158,8 @@ def careers_single(request, job_id):
 
             # Email Setup
             subject = f'Application for {job_post.title} {job_post.subtitle} | {application.first_name} {application.last_name}'
-            from_email = 'business@theaccretio.com'
-            to_email = ['karthikeyan.murugan@theaccretio.com']
+            from_email = 'dineshjustin95@gmail.com'
+            to_email = ['dineshvijayakumar96@gmail.com']
 
             # Load the HTML template for the main application email
             html_message = render_to_string('email_template_3.html', {'application': application, 'job_post': job_post})
@@ -220,13 +220,13 @@ def careers_single(request, job_id):
 #         #    'Message from Join Our Club | ' + name, # Subject
 #         #    'Name : '+ name + ' Company Name : ' + company + ' Phone : ' + phone + ' Comment : ' + comment + ' Email : ' + email, # Message
 #         #    email,
-#         #    ['karthikeyan.murugan@theaccretio.com'], # To Email
+#         #    ['dineshvijayakumar96@gmail.com'], # To Email
 #         #)
 
 #         # Email Setup 2
 #         subject = 'Message from Lets Connect | ' + name
-#         from_email = 'business@theaccretio.com'  # Set your email address here
-#         to_email = ['karthikeyan.murugan@theaccretio.com']
+#         from_email = 'dineshjustin95@gmail.com'  # Set your email address here
+#         to_email = ['dineshvijayakumar96@gmail.com']
 
 #         # Load the HTML template
 #         html_message = render_to_string('email_template_2.html', {'name': name, 'email': email, 'company': company, 'message': message})
@@ -267,8 +267,8 @@ def letsconnect(request):
 
             # Email Setup
             subject = 'Message from Lets Connect | ' + name
-            from_email = 'business@theaccretio.com'  # Set your email address here "business@theaccretio.com"
-            to_email = ['karthikeyan.murugan@theaccretio.com'] # Set your to email address here "karthikeyan.murugan@theaccretio.com"
+            from_email = 'dineshjustin95@gmail.com'  # Set your email address here "dineshjustin95@gmail.com"
+            to_email = ['dineshvijayakumar96@gmail.com'] # Set your to email address here "dineshvijayakumar96@gmail.com"
 
             # Load the HTML template
             html_message = render_to_string('email_template_2.html', {'name': name, 'email': email, 'company': company, 'message': message})
